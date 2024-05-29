@@ -26,7 +26,7 @@ class RegresoACasaViewModel(private val routeRepository: RouteRepository) : View
         ubication.value = newLatLng
     }
 
-    // PETICION A OPEN STREET MAP PARA REGRESAR LAS COORDENADAS ENTRE AMBAS UBICACIONES (LA ACTUAL Y LA CASA)
+    // PETICION A OPEN ROUTE SERVICE PARA REGRESAR LAS COORDENADAS ENTRE AMBAS UBICACIONES (LA ACTUAL Y LA CASA)
     suspend fun getListCoordenates() {
         return withContext(Dispatchers.IO) {
             val start = ubication.value.longitude.toString()+","+ubication.value.latitude.toString()

@@ -129,7 +129,7 @@ fun CurrentLocationContent(usePreciseLocation: Boolean, regresoACasaViewModel: R
                     title = "UBICACION DEL DISPOSITIVO",
                 )
                 // ESTA ES LA POLI LINEA QUE HACE ENTRE AMBAS UBICACIONES UNA VEZ QUE YA SE HIZO LA
-                // PETICION A OPEN STREET MAP Y SE DIBUJA EN EL MAPA
+                // PETICION A OPEN ROUTE SERVICE Y SE DIBUJA EN EL MAPA
                 Polyline(points = regresoACasaViewModel.RouteList.value , color= Color.Red)
             }
         }
